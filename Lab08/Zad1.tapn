@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pnml xmlns="http://www.informatik.hu-berlin.de/top/pnml/ptNetb">
+  <net active="true" id="TAPN1" type="P/T net"/>
+  <k-bound bound="3"/>
+  <feature isGame="false" isTimed="false"/>
+</pnml>
