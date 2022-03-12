@@ -2,7 +2,7 @@
 
 ## Progress
 - [x] Lab 06 - Sent!
-- [ ] Lab 07
+- [ ] Lab 07 - Done!
 - [ ] Lab 08
 - [ ] Lab 09
 - [ ] Lab 10
