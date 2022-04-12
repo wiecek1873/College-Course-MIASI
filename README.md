@@ -1,8 +1,8 @@
 # Collage-Course-MIASI
 
 ## Progress
-- [x] Lab 06 - Sent!
-- [ ] Lab 07 - Done!
+- [x] Lab 06 - Sent
+- [x] Lab 07 - Sent
 - [ ] Lab 08
 - [ ] Lab 09
 - [ ] Lab 10
