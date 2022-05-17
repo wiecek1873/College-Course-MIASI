@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tpn-editor>
+  <tpn-entities>
+    <place uuid="1c27d268-b33f-46ee-81dc-98b4be07eaf5" x="246" y="462">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p2" satellite-x="224" satellite-y="484"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="5524dd2a-7f9b-423b-8396-5abae07adc02" x="646" y="310">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p5" satellite-x="624" satellite-y="332"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="619106fe-0286-4f43-a1de-1eddc2b659a0" x="246" y="160">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p0" satellite-x="224" satellite-y="182"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="61f3f54d-52f7-4a57-ac4d-474e9a87739b" x="476" y="235">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p3" satellite-x="454" satellite-y="257"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="8e030e73-1f05-4322-b645-9c00049e0263" x="476" y="386">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p4" satellite-x="454" satellite-y="408"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="c254134d-1d43-4309-884f-a01db34c7a2a" x="246" y="311">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p1" satellite-x="224" satellite-y="333"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+  </tpn-entities>
+</tpn-editor>

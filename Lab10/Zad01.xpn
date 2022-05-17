@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tpn-editor>
+  <tpn-entities>
+    <joint uuid="552ce8dd-3243-4bc4-a8bd-12f79e0dcd8d" x="813" y="50">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="8a6a94a8-db5a-4447-9ceb-6a9cb8f7933c" x="-104" y="395">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="a7bb9d49-ae48-44ee-9493-d7d4380d6d88" x="813" y="-208">
+      <features/>
+      <properties/>
+    </joint>
+    <joint uuid="bd048ead-0550-4646-ad57-1f9eff63780f" x="-104" y="136">
+      <features/>
+      <properties/>
+    </joint>
+    <place uuid="17f6358a-aa61-487e-bf7f-16b828cb1934" x="237" y="396">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p2" satellite-x="215" satellite-y="418"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="5540948c-3188-42df-b89b-bc624182c4d2" x="442" y="395">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p9" satellite-x="419" satellite-y="417"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="5b00cc14-8f35-4c56-8618-782293fa7b26" x="442" y="-122">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p6" satellite-x="422" satellite-y="-99"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="64e5d331-1334-4db0-b2f1-fcefcf92fea4" x="442" y="-294">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p5" satellite-x="422" satellite-y="-269"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="7267d1bd-12d0-4e21-add1-578102258c4d" x="237" y="50">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p4" satellite-x="215" satellite-y="72"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="7e92ec93-fc8f-490c-ad23-8475f9813304" x="443" y="50">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p7" satellite-x="419" satellite-y="72"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="9ef4792f-43ab-4a06-97ba-ee089417d58c" x="443" y="222">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p8" satellite-x="421" satellite-y="243"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="b62203ff-f4b5-4bc3-842f-429fa7a0a5a9" x="28" y="395">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p1" satellite-x="6" satellite-y="418"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="bbdd1d83-9c1e-4769-9fdf-24782150b1f3" x="649" y="50">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p11" satellite-x="627" satellite-y="72"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="cf1c7900-e605-4923-b6f6-3feccad0a306" x="649" y="-122">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p10" satellite-x="627" satellite-y="-100"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="eeaa8ac4-dfde-4201-a9e7-671f85c24f02" x="237" y="223">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p3" satellite-x="215" satellite-y="245"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <place uuid="f7eb4259-d321-47ad-a997-12ba3484170a" x="28" y="222">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="p0" satellite-x="6" satellite-y="245"/>
+        <property id="default.marking" marking="0"/>
+      </properties>
+    </place>
+    <transition rotation-angle="0.0" uuid="0bff2707-0a00-47fc-af86-22e3560f044d" x="235" y="308">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="t3" satellite-x="253" satellite-y="320"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="132b981e-8c65-47ae-b326-17f53ea81ff6" x="235" y="506">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="t2" satellite-x="253" satellite-y="519"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="226d088f-e0e9-45a7-bdff-66dea8c99437" x="235" y="136">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="t4" satellite-x="253" satellite-y="149"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="3da64f15-2e27-4416-a0d2-2b5146bd5b04" x="440" y="505">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="t11" satellite-x="458" satellite-y="517"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="46c768a8-7305-4dd8-a730-17d438405f64" x="441" y="-390">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="t6" satellite-x="459" satellite-y="-377"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="647d735e-eb2f-4d54-a1da-8dd2a3fec856" x="440" y="-36">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="t8" satellite-x="458" satellite-y="-23"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="7cbecd91-e305-4a00-9ca8-259b2704f177" x="442" y="136">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="t9" satellite-x="460" satellite-y="147"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="9db0049c-9f67-4385-9de2-e5cfa79a31ae" x="440" y="-208">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="t7" satellite-x="458" satellite-y="-195"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="b170018f-a2d0-4a8a-a9ad-eb2d9e87f040" x="29" y="136">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="t0" satellite-x="47" satellite-y="147"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="b6a8ae4b-80ba-4e5d-b0dc-e8059f92c4ee" x="235" y="-36">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="t5" satellite-x="253" satellite-y="-23"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="c347caf2-1ce6-418c-b88e-c450eb8415a9" x="29" y="308">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="t1" satellite-x="47" satellite-y="319"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="d5c66928-6c46-4b4a-ba0e-8f5ce9e7295a" x="442" y="308">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="t10" satellite-x="460" satellite-y="319"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="d76f4597-be20-4221-8961-d9fab2accb40" x="649" y="-208">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="t12" satellite-x="667" satellite-y="-196"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+      </properties>
+    </transition>
+    <transition rotation-angle="0.0" uuid="f3f94264-a68c-4722-b003-7b7072158ef5" x="649" y="-36">
+      <features/>
+      <properties>
+        <property id="0.default.name" name="t13" satellite-x="667" satellite-y="-24"/>
+        <property enabling-function="" id="10.default.enablingFunction"/>
+        <property id="11.default.markingUpdate" marking-update=""/>
+        <property id="12.default.resetTransitions" reset-transitions=""/>
+      </properties>
+    </transition>
+    <arc from="cf1c7900-e605-4923-b6f6-3feccad0a306" to="f3f94264-a68c-4722-b003-7b7072158ef5" uuid="01654aae-5777-4764-b7be-9d3aa924fafe">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="9db0049c-9f67-4385-9de2-e5cfa79a31ae" to="5b00cc14-8f35-4c56-8618-782293fa7b26" uuid="0e1983e1-7c05-4d39-b24e-325a7cf877e6">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="5540948c-3188-42df-b89b-bc624182c4d2" to="3da64f15-2e27-4416-a0d2-2b5146bd5b04" uuid="121fc60b-5110-4017-b968-3f6be4e72d10">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="132b981e-8c65-47ae-b326-17f53ea81ff6" to="17f6358a-aa61-487e-bf7f-16b828cb1934" uuid="12f732cf-e30b-469e-8722-91a09daf786c">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="b170018f-a2d0-4a8a-a9ad-eb2d9e87f040" to="f7eb4259-d321-47ad-a997-12ba3484170a" uuid="19b03baf-db78-45aa-99b8-24faea99406d">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="c347caf2-1ce6-418c-b88e-c450eb8415a9" to="b62203ff-f4b5-4bc3-842f-429fa7a0a5a9" uuid="27dd18bb-f23b-4ea2-ab69-2129c416e907">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="7e92ec93-fc8f-490c-ad23-8475f9813304" to="7cbecd91-e305-4a00-9ca8-259b2704f177" uuid="287db428-a955-423c-b795-1e82005b8b8e">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="46c768a8-7305-4dd8-a730-17d438405f64" to="64e5d331-1334-4db0-b2f1-fcefcf92fea4" uuid="336fa61a-f69a-4d55-868f-1eb6f52bcf01">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="7cbecd91-e305-4a00-9ca8-259b2704f177" to="9ef4792f-43ab-4a06-97ba-ee089417d58c" uuid="337c1869-c8b6-4352-8685-c903a0a2b584">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="17f6358a-aa61-487e-bf7f-16b828cb1934" to="0bff2707-0a00-47fc-af86-22e3560f044d" uuid="3f302109-5f4b-4fc6-9465-866ee0d64c7f">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="9ef4792f-43ab-4a06-97ba-ee089417d58c" to="d5c66928-6c46-4b4a-ba0e-8f5ce9e7295a" uuid="48c78b70-a23f-4d8e-b7ca-f2242413336b">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="7267d1bd-12d0-4e21-add1-578102258c4d" to="b6a8ae4b-80ba-4e5d-b0dc-e8059f92c4ee" uuid="4f5c57ef-fcc9-4c06-a5c1-ac5d6d701431">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="d5c66928-6c46-4b4a-ba0e-8f5ce9e7295a" to="5540948c-3188-42df-b89b-bc624182c4d2" uuid="532ccba3-f408-40ca-9cfc-6c0685b72ef0">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="d76f4597-be20-4221-8961-d9fab2accb40" to="cf1c7900-e605-4923-b6f6-3feccad0a306" uuid="5c29b60b-c468-476a-92cd-493e066c1409">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="f7eb4259-d321-47ad-a997-12ba3484170a" to="c347caf2-1ce6-418c-b88e-c450eb8415a9" uuid="5d7657b3-ffd7-42f6-958d-46837aa4cc33">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="226d088f-e0e9-45a7-bdff-66dea8c99437" to="7267d1bd-12d0-4e21-add1-578102258c4d" uuid="69f91633-61b7-463f-8a2d-828d8cb6e23f">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="bbdd1d83-9c1e-4769-9fdf-24782150b1f3" to="552ce8dd-3243-4bc4-a8bd-12f79e0dcd8d" uuid="6af31289-f99b-4c08-9200-562d0ef50233">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="a7bb9d49-ae48-44ee-9493-d7d4380d6d88" to="d76f4597-be20-4221-8961-d9fab2accb40" uuid="742cc935-440e-4f32-9f34-d9c5e138f81c">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="5b00cc14-8f35-4c56-8618-782293fa7b26" to="647d735e-eb2f-4d54-a1da-8dd2a3fec856" uuid="7bd7eccc-ce7c-47ce-a7e5-e6d627bdadd8">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="f3f94264-a68c-4722-b003-7b7072158ef5" to="bbdd1d83-9c1e-4769-9fdf-24782150b1f3" uuid="7ed4d356-5705-4fbd-8e70-a2d673598d58">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="647d735e-eb2f-4d54-a1da-8dd2a3fec856" to="7e92ec93-fc8f-490c-ad23-8475f9813304" uuid="823e8a49-49cd-49d4-9660-f959f154be03">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="8a6a94a8-db5a-4447-9ceb-6a9cb8f7933c" to="bd048ead-0550-4646-ad57-1f9eff63780f" uuid="84261a36-2f18-4a7e-9a8e-9d9b7b712730">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="64e5d331-1334-4db0-b2f1-fcefcf92fea4" to="9db0049c-9f67-4385-9de2-e5cfa79a31ae" uuid="9b462505-2e5d-4b78-854d-5db6a345389d">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="bd048ead-0550-4646-ad57-1f9eff63780f" to="b170018f-a2d0-4a8a-a9ad-eb2d9e87f040" uuid="a49d222b-ac86-4aaf-80ab-d1e3fb9c5525">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="eeaa8ac4-dfde-4201-a9e7-671f85c24f02" to="226d088f-e0e9-45a7-bdff-66dea8c99437" uuid="af570c21-a3a8-4cd6-af4b-b929e101ee50">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="552ce8dd-3243-4bc4-a8bd-12f79e0dcd8d" to="a7bb9d49-ae48-44ee-9493-d7d4380d6d88" uuid="bf0cd47c-0f04-4bcf-b789-d7897ec5207e">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="b62203ff-f4b5-4bc3-842f-429fa7a0a5a9" to="8a6a94a8-db5a-4447-9ceb-6a9cb8f7933c" uuid="d0562ba8-722d-4262-834d-adcbd276460e">
+      <features/>
+      <properties/>
+    </arc>
+    <arc from="0bff2707-0a00-47fc-af86-22e3560f044d" to="eeaa8ac4-dfde-4201-a9e7-671f85c24f02" uuid="d2799957-ec21-4b15-bbbb-9b80cf2c5a8e">
+      <features/>
+      <properties/>
+    </arc>
+  </tpn-entities>
+</tpn-editor>
