@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>int[0,9] cyfra;
+chan wylosowano;
+broadcast chan sprawdzono;</declaration>
+	<template>
+		<name x="5" y="5">RNG</name>
+		<declaration>// Place local declarations here.</declaration>
+		<location id="id0" x="0" y="0">
+		</location>
+		<location id="id1" x="-178" y="0">
+		</location>
+		<init ref="id0"/>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id0"/>
+			<label kind="select" x="-126" y="-102">i:int[0,9]</label>
+			<label kind="synchronisation" x="-136" y="-51">wylosowano!</label>
+			<label kind="assignment" x="-127" y="-76">cyfra = i</label>
+			<nail x="-144" y="-51"/>
+			<nail x="-42" y="-51"/>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id1"/>
+			<label kind="synchronisation" x="-136" y="59">sprawdzono!</label>
+			<nail x="-51" y="59"/>
+			<nail x="-136" y="59"/>
+		</transition>
+	</template>
+	<template>
+		<name x="5" y="5">Lock</name>
+		<declaration>// Place local declarations here.</declaration>
+		<location id="id2" x="238" y="-93">
+		</location>
+		<location id="id3" x="144" y="-93">
+		</location>
+		<location id="id4" x="51" y="-93">
+		</location>
+		<location id="id5" x="-34" y="-93">
+		</location>
+		<location id="id6" x="-119" y="-93">
+		</location>
+		<location id="id7" x="-204" y="-93">
+		</location>
+		<location id="id8" x="-297" y="-93">
+		</location>
+		<location id="id9" x="-391" y="-93">
+		</location>
+		<location id="id10" x="-476" y="-93">
+		</location>
+		<location id="id11" x="-569" y="-93">
+		</location>
+		<init ref="id2"/>
+		<transition>
+			<source ref="id9"/>
+			<target ref="id2"/>
+			<label kind="guard" x="-416" y="0">cyfra != 4</label>
+			<label kind="synchronisation" x="-425" y="17">sprawdzono?</label>
+			<nail x="-391" y="0"/>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id2"/>
+			<label kind="guard" x="-221" y="0">cyfra != 3</label>
+			<label kind="synchronisation" x="-229" y="17">sprawdzono?</label>
+			<nail x="-204" y="0"/>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id2"/>
+			<label kind="guard" x="-51" y="-8">cyfra != 2</label>
+			<label kind="synchronisation" x="-59" y="8">sprawdzono?</label>
+			<nail x="-34" y="-8"/>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id2"/>
+			<label kind="guard" x="119" y="-8">cyfra != 1</label>
+			<label kind="synchronisation" x="102" y="8">sprawdzono?</label>
+			<nail x="144" y="-8"/>
+		</transition>
+		<transition>
+			<source ref="id10"/>
+			<target ref="id11"/>
+		</transition>
+		<transition>
+			<source ref="id9"/>
+			<target ref="id10"/>
+			<label kind="guard" x="-459" y="-144">cyfra == 4</label>
+			<label kind="synchronisation" x="-467" y="-127">sprawdzono?</label>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="-382" y="-127">wylosowano?</label>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id8"/>
+			<label kind="guard" x="-280" y="-144">cyfra == 3</label>
+			<label kind="synchronisation" x="-289" y="-127">sprawdzono?</label>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id7"/>
+			<label kind="synchronisation" x="-195" y="-127">wylosowano?</label>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id6"/>
+			<label kind="guard" x="-102" y="-144">cyfra == 2</label>
+			<label kind="synchronisation" x="-110" y="-127">sprawdzono?</label>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-25" y="-127">wylosowano?</label>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id4"/>
+			<label kind="guard" x="68" y="-144">cyfra == 1</label>
+			<label kind="synchronisation" x="59" y="-127">sprawdzono?</label>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id3"/>
+			<label kind="synchronisation" x="153" y="-127">wylosowano?</label>
+		</transition>
+	</template>
+	<system>// Place template instantiations here.
+rng = RNG();
+lock = Lock();
+// List one or more processes to be composed into a system.
+system rng, lock;
+    </system>
+	<queries>
+		<query>
+			<formula></formula>
+			<comment></comment>
+		</query>
+	</queries>
+</nta>

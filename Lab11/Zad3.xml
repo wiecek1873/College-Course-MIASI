@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>int[0,9] cyfra;</declaration>
+	<template>
+		<name x="5" y="5">RNG</name>
+		<declaration>// Place local declarations here.</declaration>
+		<location id="id0" x="0" y="0">
+		</location>
+		<location id="id1" x="-178" y="0">
+		</location>
+		<init ref="id0"/>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id0"/>
+			<label kind="select" x="-126" y="-102">i:int[0,9]</label>
+			<label kind="assignment" x="-126" y="-51">cyfra = i</label>
+			<nail x="-144" y="-51"/>
+			<nail x="-42" y="-51"/>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id1"/>
+			<nail x="-51" y="59"/>
+			<nail x="-136" y="59"/>
+		</transition>
+	</template>
+	<system>// Place template instantiations here.
+Process = RNG();
+// List one or more processes to be composed into a system.
+system Process;
+    </system>
+	<queries>
+		<query>
+			<formula></formula>
+			<comment></comment>
+		</query>
+	</queries>
+</nta>

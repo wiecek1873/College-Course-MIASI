@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>int[0,9] cyfra;</declaration>
+	<template>
+		<name x="5" y="5">RNG</name>
+		<declaration>// Place local declarations here.</declaration>
+		<location id="id0" x="-178" y="85">
+		</location>
+		<location id="id1" x="68" y="85">
+		</location>
+		<init ref="id0"/>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id0"/>
+			<label kind="assignment" x="-85" y="85">cyfra = 4</label>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id0"/>
+			<label kind="assignment" x="-85" y="263">cyfra = 9</label>
+			<nail x="42" y="263"/>
+			<nail x="-144" y="263"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id0"/>
+			<label kind="assignment" x="-85" y="127">cyfra = 5</label>
+			<nail x="0" y="127"/>
+			<nail x="-102" y="127"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id0"/>
+			<label kind="assignment" x="-85" y="204">cyfra = 7</label>
+			<nail x="25" y="204"/>
+			<nail x="-127" y="204"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id0"/>
+			<label kind="assignment" x="-85" y="229">cyfra = 8</label>
+			<nail x="42" y="229"/>
+			<nail x="-136" y="229"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id0"/>
+			<label kind="assignment" x="-85" y="161">cyfra = 6</label>
+			<nail x="8" y="161"/>
+			<nail x="-110" y="161"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id0"/>
+			<label kind="assignment" x="-85" y="-8">cyfra = 3</label>
+			<nail x="-8" y="-8"/>
+			<nail x="-102" y="-8"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id0"/>
+			<label kind="assignment" x="-85" y="-42">cyfra = 2</label>
+			<nail x="0" y="-42"/>
+			<nail x="-110" y="-42"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id0"/>
+			<label kind="assignment" x="-85" y="-76">cyfra = 1</label>
+			<nail x="17" y="-76"/>
+			<nail x="-127" y="-76"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id0"/>
+			<label kind="assignment" x="-85" y="-110">cyfra = 0</label>
+			<nail x="34" y="-110"/>
+			<nail x="-153" y="-110"/>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id1"/>
+			<nail x="-178" y="-144"/>
+			<nail x="-178" y="-144"/>
+			<nail x="68" y="-144"/>
+		</transition>
+	</template>
+	<system>// Place template instantiations here.
+Process = RNG();
+// List one or more processes to be composed into a system.
+system Process;
+    </system>
+	<queries>
+		<query>
+			<formula></formula>
+			<comment></comment>
+		</query>
+	</queries>
+</nta>
