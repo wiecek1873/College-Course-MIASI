@@ -18,15 +18,15 @@ broadcast chan sprawdzono;</declaration>
 			<label kind="select" x="-126" y="-102">i:int[0,9]</label>
 			<label kind="synchronisation" x="-136" y="-51">wylosowano!</label>
 			<label kind="assignment" x="-127" y="-76">cyfra = i</label>
-			<nail x="-144" y="-51"/>
-			<nail x="-42" y="-51"/>
+			<nail x="-178" y="-51"/>
+			<nail x="0" y="-51"/>
 		</transition>
 		<transition>
 			<source ref="id0"/>
 			<target ref="id1"/>
 			<label kind="synchronisation" x="-136" y="59">sprawdzono!</label>
-			<nail x="-51" y="59"/>
-			<nail x="-136" y="59"/>
+			<nail x="0" y="59"/>
+			<nail x="-178" y="59"/>
 		</transition>
 	</template>
 	<template>

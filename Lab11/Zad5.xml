@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>int[0,1] pin;
+int[1,150] cash;
+
+chan cardIn;
+chan cardOut;
+
+chan pinIn;
+chan pinRequest;
+chan pinGood;
+chan pinWrong;
+
+chan cashAmountIn;
+chan cashAmountRequest;
+chan cashAmountGood;
+chan cashAmountWrong;
+
+chan cashOut;
+
+chan cashAmountRequestRepeat;
+chan cashView;
+
+chan logout;</declaration>
+	<template>
+		<name x="5" y="5">Client</name>
+		<declaration>// Place local declarations here.</declaration>
+		<location id="id0" x="-391" y="-8">
+		</location>
+		<location id="id1" x="-229" y="-8">
+		</location>
+		<location id="id2" x="51" y="-8">
+		</location>
+		<location id="id3" x="204" y="-8">
+		</location>
+		<location id="id4" x="-85" y="-8">
+		</location>
+		<init ref="id0"/>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id0"/>
+			<label kind="synchronisation" x="-153" y="42">cardOut?</label>
+			<nail x="-85" y="102"/>
+			<nail x="-391" y="93"/>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id0"/>
+			<label kind="synchronisation" x="-8" y="42">cardOut?</label>
+			<nail x="51" y="102"/>
+			<nail x="-391" y="93"/>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id4"/>
+			<label kind="synchronisation" x="-59" y="-136">cashView?</label>
+			<nail x="51" y="-119"/>
+			<nail x="-85" y="-119"/>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id0"/>
+			<label kind="synchronisation" x="144" y="42">cardOut?</label>
+			<nail x="204" y="102"/>
+			<nail x="-391" y="93"/>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id3"/>
+			<label kind="synchronisation" x="93" y="-25">cashOut?</label>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id2"/>
+			<label kind="select" x="-59" y="-59">c:int[1,150]</label>
+			<label kind="synchronisation" x="-59" y="-42">cashAmountIn!</label>
+			<label kind="assignment" x="-59" y="-25">cash = c</label>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id4"/>
+			<label kind="select" x="-195" y="-59">p : int[0,1]</label>
+			<label kind="synchronisation" x="-195" y="-42">pinIn!</label>
+			<label kind="assignment" x="-195" y="-25">pin = p</label>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id1"/>
+			<label kind="synchronisation" x="-340" y="-25">cardIn!</label>
+		</transition>
+	</template>
+	<template>
+		<name>Atm</name>
+		<location id="id5" x="-501" y="-85">
+		</location>
+		<location id="id6" x="-382" y="-85">
+		</location>
+		<location id="id7" x="-263" y="-85">
+		</location>
+		<location id="id8" x="-136" y="-85">
+		</location>
+		<location id="id9" x="0" y="-85">
+		</location>
+		<location id="id10" x="144" y="-85">
+		</location>
+		<location id="id11" x="323" y="-85">
+		</location>
+		<location id="id12" x="493" y="-85">
+		</location>
+		<location id="id13" x="595" y="-85">
+		</location>
+		<location id="id14" x="-136" y="59">
+		</location>
+		<location id="id15" x="153" y="-25">
+		</location>
+		<location id="id16" x="323" y="59">
+		</location>
+		<init ref="id5"/>
+		<transition>
+			<source ref="id14"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-357" y="42">cardOut!</label>
+			<nail x="-501" y="59"/>
+		</transition>
+		<transition>
+			<source ref="id16"/>
+			<target ref="id14"/>
+			<label kind="synchronisation" x="51" y="34">logout?</label>
+		</transition>
+		<transition>
+			<source ref="id13"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-25" y="-221">cardOut!</label>
+			<nail x="595" y="-195"/>
+			<nail x="-501" y="-195"/>
+		</transition>
+		<transition>
+			<source ref="id12"/>
+			<target ref="id13"/>
+			<label kind="synchronisation" x="510" y="-102">cashOut!</label>
+		</transition>
+		<transition>
+			<source ref="id11"/>
+			<target ref="id12"/>
+			<label kind="synchronisation" x="340" y="-102">cashAmountGood?</label>
+		</transition>
+		<transition>
+			<source ref="id11"/>
+			<target ref="id16"/>
+			<label kind="synchronisation" x="272" y="-25">cashAmountWrong?</label>
+		</transition>
+		<transition>
+			<source ref="id10"/>
+			<target ref="id11"/>
+			<label kind="synchronisation" x="161" y="-102">cashAmountRequest!</label>
+		</transition>
+		<transition>
+			<source ref="id9"/>
+			<target ref="id10"/>
+			<label kind="synchronisation" x="17" y="-102">cashAmountIn?</label>
+		</transition>
+		<transition>
+			<source ref="id16"/>
+			<target ref="id15"/>
+			<label kind="synchronisation" x="76" y="8">cashAmountRequestRepeat?</label>
+		</transition>
+		<transition>
+			<source ref="id15"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="42" y="-51">cashView!</label>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="-110" y="-102">pinGood?</label>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id14"/>
+			<label kind="synchronisation" x="-127" y="-25">pinWrong?</label>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id8"/>
+			<label kind="synchronisation" x="-245" y="-102">pinRequest!</label>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id7"/>
+			<label kind="synchronisation" x="-348" y="-102">pinIn?</label>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id6"/>
+			<label kind="synchronisation" x="-467" y="-102">cardIn?</label>
+		</transition>
+	</template>
+	<template>
+		<name>Bank</name>
+		<declaration>int[0,1] repeatCashView;
+int[0,100] balance = 100;</declaration>
+		<location id="id17" x="-212" y="-8">
+		</location>
+		<location id="id18" x="-76" y="-8">
+		</location>
+		<location id="id19" x="59" y="-8">
+		</location>
+		<location id="id20" x="272" y="-8">
+		</location>
+		<location id="id21" x="59" y="119">
+		</location>
+		<init ref="id17"/>
+		<transition>
+			<source ref="id20"/>
+			<target ref="id17"/>
+			<label kind="guard" x="-25" y="-153">cash &lt;= balance</label>
+			<label kind="synchronisation" x="-25" y="-136">cashAmountGood!</label>
+			<label kind="assignment" x="-25" y="-119">balance -= cash</label>
+			<nail x="272" y="-119"/>
+			<nail x="-212" y="-119"/>
+		</transition>
+		<transition>
+			<source ref="id18"/>
+			<target ref="id17"/>
+			<label kind="guard" x="-187" y="25">pin == 0</label>
+			<label kind="synchronisation" x="-187" y="42">pinWrong!</label>
+			<nail x="-76" y="59"/>
+			<nail x="-212" y="59"/>
+		</transition>
+		<transition>
+			<source ref="id21"/>
+			<target ref="id17"/>
+			<label kind="guard" x="-187" y="85">repeatCashView == 0</label>
+			<label kind="synchronisation" x="-187" y="102">logout!</label>
+			<nail x="-212" y="119"/>
+		</transition>
+		<transition>
+			<source ref="id21"/>
+			<target ref="id19"/>
+			<label kind="guard" x="59" y="42">repeatCashView == 1</label>
+			<label kind="synchronisation" x="59" y="59">cashAmountRequestRepeat!</label>
+		</transition>
+		<transition>
+			<source ref="id20"/>
+			<target ref="id21"/>
+			<label kind="select" x="144" y="119">r: int[0,1]</label>
+			<label kind="guard" x="127" y="136">cash &gt; balance</label>
+			<label kind="synchronisation" x="110" y="153">cashAmountWrong!</label>
+			<label kind="assignment" x="110" y="170">repeatCashView = r</label>
+			<nail x="272" y="119"/>
+		</transition>
+		<transition>
+			<source ref="id19"/>
+			<target ref="id20"/>
+			<label kind="synchronisation" x="93" y="-25">cashAmountRequest?</label>
+		</transition>
+		<transition>
+			<source ref="id18"/>
+			<target ref="id19"/>
+			<label kind="guard" x="-51" y="-42">pin == 1</label>
+			<label kind="synchronisation" x="-51" y="-25">pinGood!</label>
+		</transition>
+		<transition>
+			<source ref="id17"/>
+			<target ref="id18"/>
+			<label kind="synchronisation" x="-194" y="-25">pinRequest?</label>
+		</transition>
+	</template>
+	<system>// Place template instantiations here.
+client = Client();
+atm = Atm();
+bank = Bank();
+// List one or more processes to be composed into a system.
+system client, atm, bank;
+    </system>
+	<queries>
+		<query>
+			<formula></formula>
+			<comment></comment>
+		</query>
+	</queries>
+</nta>
