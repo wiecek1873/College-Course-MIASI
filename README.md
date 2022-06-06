@@ -7,7 +7,7 @@
 - [x] Lab 09 - Sent
 - [x] Lab 10 - Sent
 - [x] Lab 11 - Sent
-- [ ] Lab 12
+- [x] Lab 12 - Sent
 - [ ] Lab 13
 - [ ] Lab 14
 - [ ] Lab 15
