@@ -15,119 +15,110 @@ broadcast chan sprawdzono;</declaration>
 		<transition>
 			<source ref="id1"/>
 			<target ref="id0"/>
-			<label kind="select" x="-126" y="-102">i:int[0,9]</label>
-			<label kind="synchronisation" x="-136" y="-51">wylosowano!</label>
-			<label kind="assignment" x="-127" y="-76">cyfra = i</label>
-			<nail x="-178" y="-51"/>
-			<nail x="0" y="-51"/>
+			<label kind="synchronisation" x="-160" y="-17">wylosowano!</label>
 		</transition>
 		<transition>
 			<source ref="id0"/>
 			<target ref="id1"/>
-			<label kind="synchronisation" x="-136" y="59">sprawdzono!</label>
-			<nail x="0" y="59"/>
-			<nail x="-178" y="59"/>
+			<label kind="select" x="-119" y="-127">x:int[0,9]</label>
+			<label kind="assignment" x="-119" y="-110">cyfra:=x</label>
+			<nail x="0" y="-93"/>
+			<nail x="-178" y="-93"/>
 		</transition>
 	</template>
 	<template>
 		<name x="5" y="5">Lock</name>
 		<declaration>// Place local declarations here.</declaration>
-		<location id="id2" x="238" y="-93">
+		<location id="id2" x="-867" y="-85">
 		</location>
-		<location id="id3" x="144" y="-93">
+		<location id="id3" x="-722" y="-85">
 		</location>
-		<location id="id4" x="51" y="-93">
+		<location id="id4" x="-561" y="-85">
 		</location>
-		<location id="id5" x="-34" y="-93">
+		<location id="id5" x="-416" y="-85">
 		</location>
-		<location id="id6" x="-119" y="-93">
-		</location>
-		<location id="id7" x="-204" y="-93">
-		</location>
-		<location id="id8" x="-297" y="-93">
-		</location>
-		<location id="id9" x="-391" y="-93">
-		</location>
-		<location id="id10" x="-476" y="-93">
-		</location>
-		<location id="id11" x="-569" y="-93">
+		<location id="id6" x="-255" y="-85">
 		</location>
 		<init ref="id2"/>
 		<transition>
-			<source ref="id9"/>
-			<target ref="id2"/>
-			<label kind="guard" x="-416" y="0">cyfra != 4</label>
-			<label kind="synchronisation" x="-425" y="17">sprawdzono?</label>
-			<nail x="-391" y="0"/>
+			<source ref="id5"/>
+			<target ref="id3"/>
+			<label kind="guard" x="-704" y="-246">cyfra==1</label>
+			<label kind="synchronisation" x="-544" y="-229">wylosowano?</label>
+			<nail x="-416" y="-212"/>
+			<nail x="-722" y="-212"/>
 		</transition>
 		<transition>
-			<source ref="id7"/>
-			<target ref="id2"/>
-			<label kind="guard" x="-221" y="0">cyfra != 3</label>
-			<label kind="synchronisation" x="-229" y="17">sprawdzono?</label>
-			<nail x="-204" y="0"/>
+			<source ref="id4"/>
+			<target ref="id3"/>
+			<label kind="guard" x="-535" y="-246">cyfra==1</label>
+			<label kind="synchronisation" x="-704" y="-229">wylosowano?</label>
+			<nail x="-561" y="-212"/>
+			<nail x="-722" y="-212"/>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id3"/>
+			<label kind="guard" x="-816" y="-178">cyfra==1</label>
+			<label kind="synchronisation" x="-824" y="-161">wylosowano?</label>
+			<nail x="-790" y="-85"/>
+			<nail x="-790" y="-144"/>
 		</transition>
 		<transition>
 			<source ref="id5"/>
 			<target ref="id2"/>
-			<label kind="guard" x="-51" y="-8">cyfra != 2</label>
-			<label kind="synchronisation" x="-59" y="8">sprawdzono?</label>
-			<nail x="-34" y="-8"/>
+			<label kind="guard" x="-552" y="17">cyfra!=4 and cyfra!=1</label>
+			<label kind="synchronisation" x="-527" y="34">wylosowano?</label>
+			<nail x="-416" y="8"/>
+			<nail x="-867" y="8"/>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id2"/>
+			<label kind="guard" x="-714" y="17">cyfra!=3 and cyfra!=1</label>
+			<label kind="synchronisation" x="-680" y="34">wylosowano?</label>
+			<nail x="-561" y="8"/>
+			<nail x="-867" y="8"/>
 		</transition>
 		<transition>
 			<source ref="id3"/>
 			<target ref="id2"/>
-			<label kind="guard" x="119" y="-8">cyfra != 1</label>
-			<label kind="synchronisation" x="102" y="8">sprawdzono?</label>
-			<nail x="144" y="-8"/>
-		</transition>
-		<transition>
-			<source ref="id10"/>
-			<target ref="id11"/>
-		</transition>
-		<transition>
-			<source ref="id9"/>
-			<target ref="id10"/>
-			<label kind="guard" x="-459" y="-144">cyfra == 4</label>
-			<label kind="synchronisation" x="-467" y="-127">sprawdzono?</label>
-		</transition>
-		<transition>
-			<source ref="id8"/>
-			<target ref="id9"/>
-			<label kind="synchronisation" x="-382" y="-127">wylosowano?</label>
-		</transition>
-		<transition>
-			<source ref="id7"/>
-			<target ref="id8"/>
-			<label kind="guard" x="-280" y="-144">cyfra == 3</label>
-			<label kind="synchronisation" x="-289" y="-127">sprawdzono?</label>
-		</transition>
-		<transition>
-			<source ref="id6"/>
-			<target ref="id7"/>
-			<label kind="synchronisation" x="-195" y="-127">wylosowano?</label>
+			<label kind="guard" x="-867" y="17">cyfra!=2 and cyfra!=1</label>
+			<label kind="synchronisation" x="-841" y="34">wylosowano?</label>
+			<nail x="-722" y="8"/>
+			<nail x="-867" y="8"/>
 		</transition>
 		<transition>
 			<source ref="id5"/>
 			<target ref="id6"/>
-			<label kind="guard" x="-102" y="-144">cyfra == 2</label>
-			<label kind="synchronisation" x="-110" y="-127">sprawdzono?</label>
+			<label kind="guard" x="-365" y="-85">cyfra==4</label>
+			<label kind="synchronisation" x="-374" y="-68">wylosowano?</label>
 		</transition>
 		<transition>
 			<source ref="id4"/>
 			<target ref="id5"/>
-			<label kind="synchronisation" x="-25" y="-127">wylosowano?</label>
+			<label kind="guard" x="-518" y="-85">cyfra==3</label>
+			<label kind="synchronisation" x="-535" y="-68">wylosowano?</label>
 		</transition>
 		<transition>
 			<source ref="id3"/>
 			<target ref="id4"/>
-			<label kind="guard" x="68" y="-144">cyfra == 1</label>
-			<label kind="synchronisation" x="59" y="-127">sprawdzono?</label>
+			<label kind="guard" x="-680" y="-85">cyfra==2</label>
+			<label kind="synchronisation" x="-688" y="-68">wylosowano?</label>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id3"/>
-			<label kind="synchronisation" x="153" y="-127">wylosowano?</label>
+			<label kind="guard" x="-833" y="-85">cyfra==1</label>
+			<label kind="synchronisation" x="-841" y="-68">wylosowano?</label>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id2"/>
+			<label kind="guard" x="-960" y="-178">cyfra!=1</label>
+			<label kind="synchronisation" x="-977" y="-161">wylosowano?</label>
+			<nail x="-943" y="-85"/>
+			<nail x="-943" y="-144"/>
 		</transition>
 	</template>
 	<system>// Place template instantiations here.
