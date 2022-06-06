@@ -300,10 +300,6 @@ system CzasSymulacja, AlarmSymulacja;
     </system>
 	<queries>
 		<query>
-			<formula></formula>
-			<comment></comment>
-		</query>
-		<query>
 			<formula>CzasSymulacja.G23 --&gt; CzasSymulacja.G0
 </formula>
 			<comment></comment>
@@ -318,15 +314,7 @@ system CzasSymulacja, AlarmSymulacja;
 			<comment></comment>
 		</query>
 		<query>
-			<formula>A&lt;&gt; AlarmSymulacja.Alarm and CzasSymulacja.G7AlarmOn and CzasSymulacja.minuta == 15</formula>
-			<comment></comment>
-		</query>
-		<query>
 			<formula>A[] CzasSymulacja.G7AlarmOff imply CzasSymulacja.minuta &gt;= 15 and CzasSymulacja.minuta &lt;= 60</formula>
-			<comment></comment>
-		</query>
-		<query>
-			<formula>A&lt;&gt; CzasSymulacja.G7AlarmOff and CzasSymulacja.minuta == 60</formula>
 			<comment></comment>
 		</query>
 		<query>
@@ -351,18 +339,6 @@ system CzasSymulacja, AlarmSymulacja;
 		</query>
 		<query>
 			<formula>A[] CzasSymulacja.G0 imply CzasSymulacja.minuta &lt;= 60</formula>
-			<comment></comment>
-		</query>
-		<query>
-			<formula>A&lt;&gt; CzasSymulacja.G0 and CzasSymulacja.minuta == 60</formula>
-			<comment></comment>
-		</query>
-		<query>
-			<formula>A&lt;&gt; CzasSymulacja.minuta == 60</formula>
-			<comment></comment>
-		</query>
-		<query>
-			<formula>A[] CzasSymulacja.minuta &lt;= 60</formula>
 			<comment></comment>
 		</query>
 	</queries>
