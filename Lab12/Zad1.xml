@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>chan cisza;
+chan alarm;</declaration>
+	<template>
+		<name x="5" y="5">Czas</name>
+		<declaration>clock minuta;</declaration>
+		<location id="id0" x="-918" y="-340">
+			<name x="-928" y="-374">G0</name>
+			<label kind="invariant" x="-952" y="-331">minuta &lt;= 60</label>
+		</location>
+		<location id="id1" x="-790" y="-340">
+			<name x="-800" y="-374">G1</name>
+			<label kind="invariant" x="-824" y="-331">minuta &lt;= 60</label>
+		</location>
+		<location id="id2" x="-663" y="-340">
+			<name x="-673" y="-374">G2</name>
+			<label kind="invariant" x="-706" y="-331">minuta &lt;= 60</label>
+		</location>
+		<location id="id3" x="-527" y="-340">
+			<name x="-535" y="-374">G3</name>
+			<label kind="invariant" x="-569" y="-331">minuta &lt;= 60</label>
+		</location>
+		<location id="id4" x="-382" y="-340">
+			<name x="-391" y="-374">G4</name>
+			<label kind="invariant" x="-425" y="-331">minuta &lt;= 60</label>
+		</location>
+		<location id="id5" x="-246" y="-340">
+			<name x="-255" y="-374">G5</name>
+			<label kind="invariant" x="-280" y="-331">minuta &lt;= 60</label>
+		</location>
+		<location id="id6" x="-93" y="-340">
+			<name x="-93" y="-374">G6</name>
+			<label kind="invariant" x="-136" y="-331">minuta &lt;= 60</label>
+		</location>
+		<location id="id7" x="-93" y="-229">
+			<name x="-110" y="-263">G7PrzedAlarmem</name>
+			<label kind="invariant" x="-127" y="-212">minuta &lt;= 10</label>
+		</location>
+		<location id="id8" x="-93" y="-93">
+			<name x="-110" y="-135">G7AlarmOn</name>
+			<label kind="invariant" x="-127" y="-84">minuta &lt;= 15</label>
+		</location>
+		<location id="id9" x="-93" y="34">
+			<name x="-110" y="0">G7AlarmOff</name>
+			<label kind="invariant" x="-127" y="42">minuta &lt;= 60</label>
+		</location>
+		<location id="id10" x="-238" y="34">
+			<name x="-248" y="0">G8</name>
+			<label kind="invariant" x="-272" y="42">minuta &lt;= 60</label>
+		</location>
+		<location id="id11" x="-374" y="34">
+			<name x="-384" y="0">G9</name>
+			<label kind="invariant" x="-399" y="42">minuta &lt;= 60</label>
+		</location>
+		<location id="id12" x="-510" y="34">
+			<name x="-520" y="0">G10</name>
+			<label kind="invariant" x="-544" y="42">minuta &lt;= 60</label>
+		</location>
+		<location id="id13" x="-646" y="34">
+			<name x="-656" y="0">G11</name>
+			<label kind="invariant" x="-671" y="42">minuta &lt;= 60</label>
+		</location>
+		<location id="id14" x="-790" y="34">
+			<name x="-800" y="0">G12</name>
+			<label kind="invariant" x="-816" y="42">minuta &lt;= 60</label>
+		</location>
+		<location id="id15" x="-909" y="34">
+			<name x="-919" y="0">G13</name>
+			<label kind="invariant" x="-943" y="42">minuta &lt;= 60</label>
+		</location>
+		<location id="id16" x="-93" y="136">
+			<name x="-110" y="102">G14</name>
+			<label kind="invariant" x="-127" y="144">minuta &lt;= 60</label>
+		</location>
+		<location id="id17" x="-93" y="263">
+			<name x="-110" y="229">G15</name>
+			<label kind="invariant" x="-136" y="272">minuta &lt;= 60</label>
+		</location>
+		<location id="id18" x="-229" y="263">
+			<name x="-246" y="229">G16</name>
+			<label kind="invariant" x="-263" y="272">minuta &lt;= 60</label>
+		</location>
+		<location id="id19" x="-365" y="263">
+			<name x="-374" y="229">G17</name>
+			<label kind="invariant" x="-399" y="272">minuta &lt;= 60</label>
+		</location>
+		<location id="id20" x="-501" y="263">
+			<name x="-518" y="229">G18</name>
+			<label kind="invariant" x="-535" y="272">minuta &lt;= 60</label>
+		</location>
+		<location id="id21" x="-637" y="263">
+			<name x="-646" y="229">G19</name>
+			<label kind="invariant" x="-671" y="272">minuta &lt;= 60</label>
+		</location>
+		<location id="id22" x="-1139" y="263">
+			<name x="-1149" y="229">G23</name>
+			<label kind="invariant" x="-1181" y="272">minuta &lt;= 60</label>
+		</location>
+		<location id="id23" x="-790" y="263">
+			<name x="-799" y="229">G20</name>
+			<label kind="invariant" x="-816" y="272">minuta &lt;= 60</label>
+		</location>
+		<location id="id24" x="-909" y="263">
+			<name x="-919" y="229">G21</name>
+			<label kind="invariant" x="-943" y="272">minuta &lt;= 60</label>
+		</location>
+		<location id="id25" x="-1020" y="263">
+			<name x="-1030" y="229">G22</name>
+			<label kind="invariant" x="-1054" y="272">minuta &lt;= 60</label>
+		</location>
+		<init ref="id0"/>
+		<transition>
+			<source ref="id22"/>
+			<target ref="id0"/>
+			<label kind="guard" x="-1105" y="-68">minuta==60</label>
+			<label kind="assignment" x="-1105" y="-51">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id25"/>
+			<target ref="id22"/>
+			<label kind="guard" x="-1113" y="221">minuta==60</label>
+			<label kind="assignment" x="-1113" y="238">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id24"/>
+			<target ref="id25"/>
+			<label kind="guard" x="-986" y="221">minuta==60</label>
+			<label kind="assignment" x="-986" y="238">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id23"/>
+			<target ref="id24"/>
+			<label kind="guard" x="-875" y="221">minuta==60</label>
+			<label kind="assignment" x="-875" y="238">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id21"/>
+			<target ref="id23"/>
+			<label kind="guard" x="-748" y="221">minuta==60</label>
+			<label kind="assignment" x="-748" y="238">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id20"/>
+			<target ref="id21"/>
+			<label kind="guard" x="-603" y="229">minuta==60</label>
+			<label kind="assignment" x="-603" y="246">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id19"/>
+			<target ref="id20"/>
+			<label kind="guard" x="-467" y="229">minuta==60</label>
+			<label kind="assignment" x="-467" y="246">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id18"/>
+			<target ref="id19"/>
+			<label kind="guard" x="-331" y="229">minuta==60</label>
+			<label kind="assignment" x="-331" y="246">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id17"/>
+			<target ref="id18"/>
+			<label kind="guard" x="-195" y="229">minuta==60</label>
+			<label kind="assignment" x="-195" y="246">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id16"/>
+			<target ref="id17"/>
+			<label kind="guard" x="-85" y="187">minuta==60</label>
+			<label kind="assignment" x="-85" y="204">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id15"/>
+			<target ref="id16"/>
+			<label kind="guard" x="-535" y="93">minuta==60</label>
+			<label kind="assignment" x="-535" y="110">minuta=0</label>
+			<nail x="-909" y="136"/>
+		</transition>
+		<transition>
+			<source ref="id14"/>
+			<target ref="id15"/>
+			<label kind="guard" x="-875" y="-9">minuta==60</label>
+			<label kind="assignment" x="-875" y="8">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id13"/>
+			<target ref="id14"/>
+			<label kind="guard" x="-748" y="-8">minuta==60</label>
+			<label kind="assignment" x="-748" y="9">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id12"/>
+			<target ref="id13"/>
+			<label kind="guard" x="-612" y="-8">minuta==60</label>
+			<label kind="assignment" x="-612" y="9">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id11"/>
+			<target ref="id12"/>
+			<label kind="guard" x="-476" y="-8">minuta==60</label>
+			<label kind="assignment" x="-476" y="8">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id10"/>
+			<target ref="id11"/>
+			<label kind="guard" x="-340" y="-8">minuta==60</label>
+			<label kind="assignment" x="-340" y="8">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id9"/>
+			<target ref="id10"/>
+			<label kind="guard" x="-195" y="-8">minuta==60</label>
+			<label kind="assignment" x="-195" y="9">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id9"/>
+			<label kind="guard" x="-85" y="-51">minuta==15</label>
+			<label kind="synchronisation" x="-85" y="-34">cisza!</label>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id8"/>
+			<label kind="guard" x="-85" y="-178">minuta==10</label>
+			<label kind="synchronisation" x="-85" y="-161">alarm!</label>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id7"/>
+			<label kind="guard" x="-85" y="-306">minuta==60</label>
+			<label kind="assignment" x="-85" y="-289">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id6"/>
+			<label kind="guard" x="-204" y="-382">minuta==60</label>
+			<label kind="assignment" x="-204" y="-365">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id5"/>
+			<label kind="guard" x="-340" y="-382">minuta==60</label>
+			<label kind="assignment" x="-340" y="-365">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id4"/>
+			<label kind="guard" x="-484" y="-382">minuta==60</label>
+			<label kind="assignment" x="-484" y="-365">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id3"/>
+			<label kind="guard" x="-630" y="-382">minuta==60</label>
+			<label kind="assignment" x="-630" y="-365">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id2"/>
+			<label kind="guard" x="-773" y="-382">minuta==60</label>
+			<label kind="assignment" x="-773" y="-365">minuta=0</label>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id1"/>
+			<label kind="guard" x="-901" y="-382">minuta==60</label>
+			<label kind="assignment" x="-901" y="-365">minuta=0</label>
+		</transition>
+	</template>
+	<template>
+		<name>Alarm</name>
+		<location id="id26" x="-620" y="-272">
+			<name x="-671" y="-280">Cisza</name>
+		</location>
+		<location id="id27" x="-493" y="-272">
+			<name x="-476" y="-280">Alarm</name>
+		</location>
+		<init ref="id26"/>
+		<transition>
+			<source ref="id27"/>
+			<target ref="id26"/>
+			<label kind="synchronisation" x="-578" y="-382">cisza?</label>
+			<nail x="-493" y="-357"/>
+			<nail x="-620" y="-357"/>
+		</transition>
+		<transition>
+			<source ref="id26"/>
+			<target ref="id27"/>
+			<label kind="synchronisation" x="-578" y="-204">alarm?</label>
+			<nail x="-620" y="-204"/>
+			<nail x="-493" y="-204"/>
+		</transition>
+	</template>
+	<system>CzasSymulacja= Czas();
+AlarmSymulacja= Alarm();
+
+system CzasSymulacja, AlarmSymulacja;
+    </system>
+	<queries>
+		<query>
+			<formula></formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>CzasSymulacja.G23 --&gt; CzasSymulacja.G0
+</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>CzasSymulacja.G0 --&gt; CzasSymulacja.G23
+</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>A[] AlarmSymulacja.Alarm imply CzasSymulacja.G7AlarmOn and CzasSymulacja.minuta &gt;= 10 and CzasSymulacja.minuta &lt;= 15</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>A&lt;&gt; AlarmSymulacja.Alarm and CzasSymulacja.G7AlarmOn and CzasSymulacja.minuta == 15</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>A[] CzasSymulacja.G7AlarmOff imply CzasSymulacja.minuta &gt;= 15 and CzasSymulacja.minuta &lt;= 60</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>A&lt;&gt; CzasSymulacja.G7AlarmOff and CzasSymulacja.minuta == 60</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>A[] CzasSymulacja.G7AlarmOn imply AlarmSymulacja.Alarm</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>A&lt;&gt; CzasSymulacja.G7AlarmOn and CzasSymulacja.minuta == 15</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>A[] CzasSymulacja.G7AlarmOn imply CzasSymulacja.minuta &gt;= 10 and CzasSymulacja.minuta &lt;= 15</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>A&lt;&gt; CzasSymulacja.G7PrzedAlarmem and CzasSymulacja.minuta == 10</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>A[] CzasSymulacja.G7PrzedAlarmem imply CzasSymulacja.minuta &lt;= 10</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>A[] CzasSymulacja.G0 imply CzasSymulacja.minuta &lt;= 60</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>A&lt;&gt; CzasSymulacja.G0 and CzasSymulacja.minuta == 60</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>A&lt;&gt; CzasSymulacja.minuta == 60</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>A[] CzasSymulacja.minuta &lt;= 60</formula>
+			<comment></comment>
+		</query>
+	</queries>
+</nta>
