@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>const int n=3;
+const int t2=20;
+
+broadcast chan sessionStart[n];
+chan sessionRequest[n];
+chan sessionDisconnect[n];
+
+
+</declaration>
+	<template>
+		<name>Server</name>
+		<declaration>int[0,n-1] clientId;</declaration>
+		<location id="id0" x="-111" y="-34">
+			<name x="-127" y="-17">Idle</name>
+		</location>
+		<location id="id1" x="161" y="-34">
+			<name x="144" y="-17">Busy</name>
+			<committed/>
+		</location>
+		<init ref="id0"/>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id0"/>
+			<label kind="synchronisation" x="-34" y="-119">sessionStart[clientId]!</label>
+			<nail x="161" y="-119"/>
+			<nail x="-110" y="-119"/>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id1"/>
+			<label kind="select" x="-34" y="-34">i:int[0,n-1]</label>
+			<label kind="synchronisation" x="-34" y="-17">sessionRequest[i]?</label>
+			<label kind="assignment" x="-34" y="0">clientId:=i</label>
+		</transition>
+	</template>
+	<template>
+		<name x="5" y="5">Client</name>
+		<parameter>const int [0,n-1] i</parameter>
+		<declaration>int[0,t2-1] t1 = 0;
+clock sessionTime;</declaration>
+		<location id="id2" x="-331" y="-17">
+			<name x="-348" y="0">Idle</name>
+		</location>
+		<location id="id3" x="-51" y="-17">
+			<name x="-110" y="-8">WaitingForSession</name>
+		</location>
+		<location id="id4" x="289" y="-17">
+			<name x="229" y="0">ConnectedWithSession</name>
+			<label kind="invariant" x="229" y="17">sessionTime&lt;=t2</label>
+		</location>
+		<init ref="id2"/>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id2"/>
+			<label kind="synchronisation" x="-76" y="-221">sessionDisconnect[i]?</label>
+			<nail x="289" y="-221"/>
+			<nail x="-331" y="-221"/>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id2"/>
+			<label kind="guard" x="-76" y="-136">sessionTime&gt;=t1</label>
+			<label kind="synchronisation" x="-76" y="-119">sessionDisconnect[i]!</label>
+			<nail x="289" y="-136"/>
+			<nail x="-331" y="-136"/>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id4"/>
+			<label kind="select" x="42" y="-17">time:int[1,t2-1]</label>
+			<label kind="synchronisation" x="42" y="0">sessionStart[i]?</label>
+			<label kind="assignment" x="42" y="17">t1:=time,
+sessionTime:=0</label>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id3"/>
+			<label kind="synchronisation" x="-272" y="-8">sessionRequest[i]!</label>
+		</transition>
+	</template>
+	<template>
+		<name>Session</name>
+		<parameter>const int [0,n-1] i</parameter>
+		<declaration>clock sessionTime; //sessionTime
+</declaration>
+		<location id="id5" x="-85" y="0">
+			<name x="-102" y="8">Idle</name>
+		</location>
+		<location id="id6" x="195" y="0">
+			<name x="127" y="17">ConnectedWithClient</name>
+			<label kind="invariant" x="136" y="34">sessionTime&lt;=t2</label>
+		</location>
+		<init ref="id5"/>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id5"/>
+			<label kind="guard" x="0" y="-153">sessionTime==t2</label>
+			<label kind="synchronisation" x="0" y="-136">sessionDisconnect[i]!</label>
+			<nail x="195" y="-153"/>
+			<nail x="-85" y="-153"/>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="0" y="-68">sessionDisconnect[i]?</label>
+			<nail x="195" y="-68"/>
+			<nail x="-85" y="-68"/>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id6"/>
+			<label kind="synchronisation" x="0" y="0">sessionStart[i]?</label>
+			<label kind="assignment" x="0" y="17">sessionTime:=0</label>
+		</transition>
+	</template>
+	<system>system Server, Client, Session;
+    </system>
+	<queries>
+		<query>
+			<formula>E&lt;&gt; forall(i:int[0,n-1]) (Client(i).ConnectedWithSession and Session(i).ConnectedWithClient)</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; exists(i:int[0,n-1]) ((Client(i).ConnectedWithSession and Client(i).sessionTime &gt; t2) or (Session(i).ConnectedWithClient and Session(i).sessionTime &gt; t2))</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>(Client(0).ConnectedWithSession and Session(0).ConnectedWithClient) --&gt; (Client(0).Idle and Session(0).Idle)</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; forall(i:int[0,n-1]) (Server.Busy and Client(i).WaitingForSession)</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>A[] forall(i:int[0,n-1]) forall(j:int[0,n-1]) (Client(i).WaitingForSession and Client(j).WaitingForSession imply i==j)</formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; forall(i:int[0,n-1]) (Client(i).Idle and (Client(i).sessionTime &lt; Client(i).t1) and (Client(i).t1 != 0))</formula>
+			<comment></comment>
+		</query>
+	</queries>
+</nta>
