@@ -1,0 +1,19 @@
+CTLSPEC - nomenklatura CTL, bada po wartościach
+LTLSPEC - nomenklatura LTL, bada po osi czasu
+
+CTL EF - czy kiedykolwiek
+CTL AG - czy zaawsze 
+CTL A[] - Na pewno
+CTL U - Dopóki
+CTL EBF - Istnieje taka możliwość
+CTL !EBF - Nie może
+CTL ABF - Na pewno będzie
+
+LTL - G - czy zawsze
+LTL - X - Następny stan
+
+COMPUTE MIN - liczy minimalną ilość stanów pomiędzy 
+COMPUTE MAX - liczy maksymalną ilość stanów pomiędzy
+
+INVARSPEC - " Jeśli ... to ..."
+
